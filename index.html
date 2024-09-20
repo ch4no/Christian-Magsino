@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+  <title>Magsino, Christian C.</title>
+
+  <style>
+    /* Light mode styles */
+    body {
+      background-color: white;
+      color: black;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: lightgray;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header .logo {
+      font-size: 1.5em;
+      text-decoration: none;
+      color: black;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+    }
+
+    .navbar a.active {
+      font-weight: bold;
+    }
+
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 20px 20px; /* Adjusted padding to account for fixed header */
+      flex-wrap: wrap;
+    }
+
+    .home-content {
+      max-width: 50%;
+    }
+
+    .home-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 50%;
+    }
+
+    .home-img img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #f4f4f4;
+    }
+
+    .skills {
+      padding: 20px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .skills-item {
+      flex: 1 1 30%;
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .skills-item i {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      padding: 20px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .contact {
+      padding: 20px;
+    }
+
+    .contact .info {
+      margin-bottom: 20px;
+    }
+
+    .contact .info i {
+      margin-right: 10px;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+
+    .header.dark-mode {
+      background-color: #333;
+    }
+
+    .navbar a {
+      color: white;
+    }
+
+    .skills-item {
+      background-color: #333;
+    }
+
+    .section-title {
+      color: white;
+    }
+
+    .image-grid img {
+      border: 2px solid #444;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center; /* Center the icons */
+      gap: 20px; /* Space between icons */
+      margin-top: 20px; /* Add some space above */
+    }
+
+    .social-icon {
+      font-size: 30px; /* Size of the icons */
+      color: black; /* Default icon color */
+      transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    }
+
+    .social-icon:hover {
+      color: #007bff; /* Change color on hover */
+      transform: scale(1.1); /* Slightly enlarge the icon */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container" id="container">
+    <header class="header">
+      <a href="#" class="logo">Christian</a>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Dark Mode Toggle Icon -->
+      <div class="toggle-icon" id="theme-toggle">
+        <i class='bx bx-moon'></i>
+      </div>
+    </header>
+
+    <section id="home" class="home">
+      <div class="home-content">
+        <h3>Hi!</h3>
+        <h1>Christian C. Magsino</h1>
+        <h3><span>Web Developer</span></h3>
+        <p>I'm known for my talent in web development creating eye-catching websites that are both dynamic and visually appealing.</p>
+
+        <div class="social-media">
+          <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class='bx bxl-facebook'></i></a>
+          <a href="https://www.yourwebsite.com" target="_blank" class="social-icon"><i class='bx bxl-twitter'></i></a>
+          <a href="https://www.instagram.com/ch4no22/?hl=en" target="_blank" class="social-icon"><i class='bx bxl-instagram-alt'></i></a>
+          <a href="https://www.yourwebsite.com" target="_blank" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <a href="" class="btn">Download CV</a>
+      </div>
+      <div class="home-img">
+        <img src="image/christian-magsino.jpg" alt="Christian Magsino">
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li class="skills-item">
+          <i class="icon bx bx-code-block"></i>
+          <h3>Web Development</h3>
+          <p>HTML5, CSS, JavaScript</p>
+        </li>
+        <li class="skills-item">
+          <i class="icon bx bx-paint"></i>
+          <h3>UI Design</h3>
+          <p>Adobe XD</p>
+        </li>
+        <li class="skills-item">
+          <i class="icon bx bx-data"></i>
+          <h3>Database Management</h3>
+          <p>MySQL</p>
+        </li>
+        <li class="skills-item">
+          <i class="icon bx bx-server"></i>
+          <h3>Backend Development</h3>
+          <p>Node.js, Express</p>
+        </li>
+        <li class="skills-item">
+          <i class="icon bx bx-mobile"></i>
+          <h3>Mobile Development</h3>
+          <p>Flutter</p>
+        </li>
+        <li class="skills-item">
+          <i class="icon bx bx-analytics"></i>
+          <h3>Data Analysis</h3>
+          <p>Python</p>
+        </li>
+      </ul>
+    </section>
+
+    <div class="section-title" id="projects">
+      <h2>Projects</h2>
+      <p>I am a third-year student at NU LIPA, pursuing Bachelor of Science in Information Technology with a specialization in mobile and web application. 
+        My education has given me a strong foundation in IT theory and practice, which has enabled me to comprehend the complexities of software design and development. 
+        I'm developing my ability to make creative, intuitive programs as I go deeper into my studies, which is preparing me for a dynamic job in the rapidly changing IT industry. 
+        My love for technology motivates me to keep learning and evolving so that I can keep up with the latest developments in the market and best practices.
+        As a web designer, my work is deeply intertwined with the field of information technology (IT). In this role, I play a key part in bridging the gap between design and functionality. I use my skills to create visually engaging and user-friendly interfaces that align with the broader goals of IT systems.
+      </p>
+    </div>
+
+    <!-- Image Grid for the Portfolio Section -->
+    <div class="image-grid">
+      <img src="image/image1.jpg" class="" alt="Project 1">
+      <img src="image/image2.jpg" class="" alt="Project 2">
+      <img src="image/image3.jpg" class="" alt="Project 3">
+      <img src="image/image4.jpg" class="" alt="Project 4">
+      <img src="image/image5.jpg" class="" alt="Project 5">
+      <img src="image/image6.jpg" class="" alt="Project 6">
+      <img src="image/image7.jpg" class="" alt="Project 7">
+      <img src="image/image8.jpg" class="" alt="Project 8">
+      <img src="image/image9.jpg" class="" alt="Project 9">
+      <img src="image/image10.jpg" class="" alt="Project 10">
+      <img src="image/image11.jpg" class="" alt="Project 11">
+      <img src="image/image12.jpg" class="" alt="Project 12">
+      <img src="image/moeyheist.jpg" class="" alt="Project 13">
+    </div>
+
+    <section id="video-section" class="video">
+      <h2>My Video</h2>
+      <video width="100%" controls>
+        <source src="image/video.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <img src="image/magsino.gif" alt="Description of the GIF" style="width: 100%; max-width: 600px;">
+
+  </div>
+
+  <div id="contact" class="section-title">
+    <h2>Contact</h2>
+    <p>Feel free to reach out!</p>
+    <div class="contact">
+      <div class="info"><i class='bx bx-mail-send'></i>magsinochristian059@gmail.com</div>
+      <div class="info"><i class='bx bx-phone'></i> 09945010409</div>
+    </div>
+  </div>
+
+  <!-- JavaScript for theme toggle -->
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check for previously saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      body.classList.add('dark-mode');
+      themeToggle.innerHTML = "<i class='bx bx-sun'></i>";
+    }
+
+    themeToggle.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+
+      if (body.classList.contains('dark-mode')) {
+        themeToggle.innerHTML = "<i class='bx bx-sun'></i>"; 
+        localStorage.setItem('theme', 'dark'); 
+      } else {
+        themeToggle.innerHTML = "<i class='bx bx-moon'></i>"; 
+        localStorage.setItem('theme', 'light'); 
+      }
+    });
+  </script>
+</body>
+</html>
